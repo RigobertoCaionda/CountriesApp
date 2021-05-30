@@ -113,3 +113,86 @@ body{
 .country-details p{
 	padding-bottom: 25px;
 }
+.loadingBar{
+	display: none;
+	color: red;
+	font-size: 1.7rem;
+	font-weight: bold;
+	text-align: center;
+}
+.modal{
+	display: none;
+	margin: 70px 0 0 70px;
+	padding-bottom: 90px;
+}
+.back-button{
+	width: 135px;
+	padding: 10px 50px;
+	background-color: #2b3945;
+	border: 1px solid #313c45;
+	border-radius: 5px;
+	color: #fafafa;
+	cursor: pointer;
+	margin-bottom: 70px;
+}
+.back-button:hover{
+	transform: scale(1.05);
+}
+.modal-details{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.modal-image{
+	width: 620px;
+	height: 442px;
+}
+.modal-image img{
+	width: 100%;
+	height: 100%;
+}
+.text-first-group{
+	display: flex;
+	align-items: center;
+	margin-bottom: 150px;
+}
+.modal-text{
+	width: 50%;
+	color: #fafafa;
+	margin-left: 50px;
+}
+.first{
+	margin-right: 50px;
+}
+.first h3{
+	margin-bottom: 10px;
+}
+.first p{
+	margin-bottom: 10px;
+	font-weight: 200;
+}
+.second p{
+	margin-bottom: 10px;
+	font-weight: 200;
+}
+.first span, .second span{
+	color: #b8bcbf;
+}
+.text-second-group{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	font-weight: 200;
+}
+.border-country{
+	padding: 5px;
+	background-color: #202c37;
+	border: 2px solid #1d2837;
+	cursor: pointer;
+}
+.border-country:hover{
+	border: 3px solid #1d2837;
+}
+.border-country--wrapper{
+	display: none;
+}

@@ -8,6 +8,21 @@
 body{
 	background-color: #202c37;
 }
+.lightHeader{
+	background-color: #fff !important;
+	color: #000 !important;
+}
+.lightBody{
+	background-color: #fafafa;
+}
+.lightSearch, .lightSelect{
+	background-color: #fff !important;
+	color: #000 !important;
+}
+.lightCountry{
+	background-color: #fff !important;
+}
+
 .header{
 	display: flex;
 	justify-content: space-between;
@@ -17,7 +32,7 @@ body{
 	color: #fafafa;
 	font-weight: 600;
 	background-color: #2b3945;
-	border-bottom: 1px solid #19222b;
+	box-shadow: rgb(0 0 0 / 50%) 0px 0px 6px;/**/
 }
 .header-left{
 	font-size: 1.8rem;
@@ -35,8 +50,9 @@ body{
 .seekable-area-left input{
 	padding: 18px 300px 18px 20px;
 	border-radius: 7px;
-	border: 1px solid #19222a;
+	box-shadow: rgb(0 0 0 / 50%) 0px 0px 6px;
 	outline: none;
+	border: none;
 	font-size: 0.9rem;
 	background-color: #2b3945;
 	color: #fafafa;
@@ -51,8 +67,9 @@ body{
 	border-radius: 7px;
 	background-color: #2b3945;
 	color: #fafafa;
-	border: 1px solid #19222a;
+	box-shadow: rgb(0 0 0 / 50%) 0px 0px 6px;
 	outline: none;
+	border: none;
 }
 ::-webkit-input-placeholder {
    color: #d0d3d5;
@@ -81,14 +98,14 @@ body{
 	width: 265px;
 	background-color: #2b3945;
 	border-radius: 10px;
-	border: 1px solid #19222b;
+	box-shadow: rgb(0 0 0 / 50%) 0px 0px 14px;
 	margin-right: 55px;
 	margin-bottom: 80px;
 	cursor: pointer;
-	transition: all ease-in 0.4s;
+	transition: box-shadow ease-in 0.4s;
 }
 .country:hover{
-	transform: scale(1.1);
+	box-shadow: rgb(0 0 0 / 80%) 0px 10px 20px;/*deslocamento x, y, blur-radius, blur-spread*/
 }
 .country-wrapper{
 	display: none;
@@ -106,6 +123,9 @@ body{
 .country-details{
 	padding-left: 20px;
 	color: #fafafa;
+}
+.lightCountryDetails{
+	color: #000 !important;
 }
 .country-details h3{
 	padding-bottom: 20px;
@@ -129,14 +149,14 @@ body{
 	width: 135px;
 	padding: 10px 50px;
 	background-color: #2b3945;
-	border: 1px solid #313c45;
+	box-shadow: rgb(0 0 0 / 50%) 0px 0px 14px;
 	border-radius: 5px;
 	color: #fafafa;
 	cursor: pointer;
 	margin-bottom: 70px;
 }
 .back-button:hover{
-	transform: scale(1.05);
+	box-shadow: rgb(0 0 0 / 80%) 0px 10px 20px;
 }
 .modal-details{
 	display: flex;

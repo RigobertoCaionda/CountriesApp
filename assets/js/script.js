@@ -13,6 +13,8 @@ let secondP = document.querySelectorAll('.second p span');
 let textSecondGroup = document.querySelector('.text-second-group');
 let backButton = document.querySelector('.back-button');
 let clickedItemParentAttribute;
+let modeToggle = document.querySelector('.header-right');
+let header = document.querySelector('header');
 async function loadingCountries(){
 	let req = await fetch('https://restcountries.eu/rest/v2/all');
 	let json = await req.json();
@@ -183,5 +185,38 @@ searchInput.addEventListener('keyup',(event)=>{
 	}else{
 		loadingCountries();
 	}
+});
+let modeTitle = document.querySelector('.header-right span');
+let cabecalho = document.querySelector('.header');
+let body = document.querySelector('body');
+modeToggle.addEventListener('click',()=>{
+	let countryDetails = document.querySelectorAll('.country-details');
+if(header.classList.contains('light')){
+	header.classList.remove('light');
+	modeTitle.innerHTML = 'Dark Mode';
+	cabecalho.classList.remove('lightHeader');
+	body.classList.remove('lightBody');
+	searchInput.classList.remove('lightSearch');
+	countryCategory.classList.remove('lightSelect');
+	country.forEach((item)=>{
+		item.classList.remove('lightCountry');
+	});
+	countryDetails.forEach((item)=>{
+		item.classList.remove('lightCountryDetails');
+	});
+}else{
+	header.classList.add('light');
+	modeTitle.innerHTML = 'Light Mode';
+	cabecalho.classList.add('lightHeader');
+	body.classList.add('lightBody');
+	searchInput.classList.add('lightSearch');
+	countryCategory.classList.add('lightSelect');
+	country.forEach((item)=>{
+		item.classList.add('lightCountry');
+	});
+	countryDetails.forEach((item)=>{
+		item.classList.add('lightCountryDetails');
+	});
+}
 });
 loadingCountries();

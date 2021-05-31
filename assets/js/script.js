@@ -189,8 +189,10 @@ searchInput.addEventListener('keyup',(event)=>{
 let modeTitle = document.querySelector('.header-right span');
 let cabecalho = document.querySelector('.header');
 let body = document.querySelector('body');
+let modalText = document.querySelector('.modal-text');
 modeToggle.addEventListener('click',()=>{
 	let countryDetails = document.querySelectorAll('.country-details');
+	let paisesDeBorda = document.querySelectorAll('.border-country');
 if(header.classList.contains('light')){
 	header.classList.remove('light');
 	modeTitle.innerHTML = 'Dark Mode';
@@ -204,6 +206,12 @@ if(header.classList.contains('light')){
 	countryDetails.forEach((item)=>{
 		item.classList.remove('lightCountryDetails');
 	});
+	firstH2.classList.remove('lightModalH2');
+	modalText.classList.remove('lightModalText');
+	paisesDeBorda.forEach((item)=>{
+		item.classList.remove('lightBorderCountry');
+	});
+	backButton.classList.remove('lightBackButton');
 }else{
 	header.classList.add('light');
 	modeTitle.innerHTML = 'Light Mode';
@@ -217,6 +225,12 @@ if(header.classList.contains('light')){
 	countryDetails.forEach((item)=>{
 		item.classList.add('lightCountryDetails');
 	});
+	firstH2.classList.add('lightModalH2');
+	modalText.classList.add('lightModalText');
+	paisesDeBorda.forEach((item)=>{
+		item.classList.add('lightBorderCountry');
+	});
+	backButton.classList.add('lightBackButton');
 }
 });
 loadingCountries();
